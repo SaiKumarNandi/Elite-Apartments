@@ -1,0 +1,872 @@
+/*This is the Reference to Google Fonts API: Allows us to use various fonts to make website look beautiful*/
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+
+/*Created by Sai Kumar Nadni*/
+/*style for all the elements in web page*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/*root elements selects the documents root element : html*/
+/*declaring color once and using it multiple times: eliminates the need for fetching the color code mutliple times*/
+:root {
+    --blackclr: #222327;
+}
+
+/*style for body tag*/
+body {
+    justify-content: center;
+    align-items: center;
+    min-height: 25vh;
+    /*adjust the margin from top for navigation bar*/
+    margin-top: 10px;
+    /*background-color: rgb(197, 247, 233);*/
+}
+
+/*Style for page header in all pages*/
+.page-header{
+    display: felx;
+    text-align: center;
+    margin-top: 40px;
+}
+
+
+/*Below is all te styling effects for the navigation bar*/
+#header-package {
+    width: 100%;
+    background: #fbbbbb;
+    /*efdbdb */
+    display: flex;
+    /*Makes the elements flow from left to right rather than top to bottom*/
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+/*for logo*/
+.logo {
+    background-color: white;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    padding-left: 80px;
+}
+
+.navigation {
+    position: relative;
+    width: 800px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.navigation ul {
+    display: flex;
+    width: 550px;
+}
+
+.navigation ul li {
+    position: reltive;
+    list-style: none;
+    z-index: 1;
+    width: 70px;
+    height: 70px;
+}
+
+.navigation ul li a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+}
+
+.navigation ul li a .icon {
+    position: relative;
+    display: block;
+    line-height: 75px;
+    font-size: 1.5em;
+    text-align: center;
+    transition: 0.5s;
+    color: var(--blackclr);
+}
+
+.navigation ul li.active a .icon {
+    transform: translateY(-32px);
+}
+
+.navigation ul li a .text {
+    position: absolute;
+    color: var(--blackclr);
+    font-weight: 400;
+    font-size: 0.75em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    width: 90px;
+    opacity: 0;
+    /*fading out all the names below the icons*/
+    transform: translateY(20px);
+
+}
+
+.navigation ul li.active a .text {
+    opacity: 1;
+    transform: translateY(10px);
+}
+
+.navigation ul li.active a .text {
+    opacity: 1;
+    transform: translateY(10px);
+}
+
+/*Circle for highlighting the active link*/
+.indicator {
+    position: absolute;
+    top: -50%;
+    width: 70px;
+    height: 70px;
+    background: #fe7d7d;
+    border-radius: 50%;
+    border: 6px solid white;
+    transition: 0.5s;
+}
+
+/*curve before the circle*/
+.indicator::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -22.5px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-top-right-radius: 20px;
+    box-shadow: 1px -10px 0 0 white;
+}
+
+/*curve after the circle*/
+.indicator::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -22.5px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-top-left-radius: 20px;
+    box-shadow: -1px -10px 0 0 white;
+}
+
+/*moving/translate the circle to highlight the activated link*/
+
+.navigation ul li:nth-child(1).active~.indicator {
+    transform: translateX(calc(70px * 0));
+}
+
+.navigation ul li:nth-child(2).active~.indicator {
+    transform: translateX(calc(70px * 1));
+}
+
+.navigation ul li:nth-child(3).active~.indicator {
+    transform: translateX(calc(70px * 2));
+}
+
+.navigation ul li:nth-child(4).active~.indicator {
+    transform: translateX(calc(70px * 3));
+}
+
+.navigation ul li:nth-child(5).active~.indicator {
+    transform: translateX(calc(70px * 4));
+}
+
+.navigation ul li:nth-child(6).active~.indicator {
+    transform: translateX(calc(70px * 5));
+}
+
+.navigation ul li:nth-child(7).active~.indicator {
+    transform: translateX(calc(70px * 6));
+}
+
+.navigation ul li:nth-child(8).active~.indicator {
+    transform: translateX(calc(70px * 7));
+}
+
+/*Styles for index.php page*/
+
+#index-start {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 40px;
+}
+  
+.for-index {
+    text-align: center;
+    width: 60%;
+}
+
+#index-package {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+  
+#index-package .index-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+  
+#index-package .index-container > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    width: 200px;
+}
+
+#index-package .index-container > div img {
+    width: 600px;
+    height: 400px;
+}
+  
+#index-package .index-container > div p {
+    width: 60%;
+    text-align: center;
+}
+
+#index-package .index-container .for-gallery,
+#index-package .index-container .for-aminities,
+#index-package .index-container .for-sustainability,
+#index-package .index-container .for-applynow,
+#index-package .index-container .for-policy,
+#index-package .index-container .for-aboutus {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centers child elements */
+  width: 70%;
+  position: relative;
+}
+
+#index-package .index-container .for-gallery img,
+#index-package .index-container .for-gallery p,
+#index-package .index-container .for-gallery a,
+#index-package .index-container .for-aminities img,
+#index-package .index-container .for-aminities p,
+#index-package .index-container .for-aminities a,
+#index-package .index-container .for-sustainability img,
+#index-package .index-container .for-sustainability p,
+#index-package .index-container .for-sustainability a,
+#index-package .index-container .for-applynow img,
+#index-package .index-container .for-applynow p,
+#index-package .index-container .for-applynow a,
+#index-package .index-container .for-policy img,
+#index-package .index-container .for-policy p,
+#index-package .index-container .for-policy a,
+#index-package .index-container .for-aboutus img,
+#index-package .index-container .for-aboutus p,
+#index-package .index-container .for-aboutus a {
+  margin-bottom: 30px; /* adds 30px space between img, p, and a tags */
+  display: block;
+  text-align: center; /* centers content */
+}
+
+.index-button{
+    height: 50px;
+    width: 200px;
+    border-radius: 10%;
+    background-color: #fbbbbb;
+}
+
+/*Styles for applynow.php*/
+#maintenance {
+    width: 90%;
+    height: 550px;
+    margin: 40px auto;
+    padding: 5px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #fe7d7d 0%, #fe7d7d 30%, #fbbbbb 30%, #fbbbbb 100%);
+  }
+  
+  .maintenance-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+    margin-top: 20px;
+    position: relative;
+  }
+  
+  .mform1 {
+    width: 50%;
+    height: 100%;
+    margin-right: 20px;
+    background-color: white;
+    margin-top: 0;
+    transform: translateY(-30px);
+  }
+  
+  .mform2 {
+    width: 50%;
+    height: 100%;
+    margin-left: 20px;
+    background-color: white;
+    margin-top: 0;
+    transform: translateY(-30px);
+  }
+
+.mform1 .form-group{
+    display: flex;
+    gap: 2px;
+    padding-left: 50px;
+    padding-top: 10px;
+}
+
+.mform2 .form-group{
+    display: flex;
+    gap: 2px;
+    padding-left: 50px;
+    padding-top: 10px;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.form-group label{
+    color: #f74f4f;
+    font-weight: 400;
+}
+
+.form-group input{
+    outline: none;
+    border: 1px solid black;
+    max-width: 45%;
+}
+
+.form-group textarea{
+    outline: none;
+    border: 1px solid black;
+    max-width: 45%;
+}
+
+.input-box label{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.mform1 button{
+    background-color: #fe7d7d;
+    font-weight: 400;
+    font-size: 1.1;
+    max-width: 150px;
+    margin: auto;
+    margin-left: 140px;
+    cursor: pointer;
+    padding: 5px 5px;
+}
+
+.mform2 button{
+    background-color: #fe7d7d;
+    font-weight: 400;
+    font-size: 1.1;
+    max-width: 150px;
+    margin: auto;
+    margin-left: 120px;
+    cursor: pointer;
+    padding: 5px 5px;
+}
+  
+.heading5{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.maintenance-table {
+    transform: translateY(+10px);
+    width: 100%;
+    border-collapse: collapse;
+    margin: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  td, th {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #ddd;
+  }
+
+/*Styles for Gallery.php page*/
+
+#imageSlider {
+    width: 100%;
+    height: 80vh;
+    /**Adjust this height property to make the adjustment of height from top */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider {
+    width: 800px;
+    height: 500px;
+    position: relative;
+}
+
+.slider img {
+    width: 100%;
+    height: 100%;
+    border-radius: 7px;
+}
+
+.btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.btn button {
+    background: none;
+    outline: none;
+    border: none;
+    color: black;
+}
+
+/*size of forward and backward button*/
+.btn button ion-icon {
+    font-size: 50px;
+}
+
+.btn button:hover ion-icon {
+    color: blue;
+}
+
+
+/*content below image slider*/
+#galleryContent {
+    width: 100%;
+    height: 30vh;
+    margin-top: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content1,
+.content2 {
+    width: 800px;
+    height: 500px;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+/*Styles for applynow.php*/
+
+#apply-now{
+    background: linear-gradient(90deg, #fe7d7d 0%, #fe7d7d 30%, #fbbbbb 30%, #fbbbbb 100%);
+    width: 90%;
+    height: 550px;
+    margin: 40px auto;
+    padding: 5px 40px;
+}
+
+#apply-now .title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form{
+    grid-area: form;
+}
+
+.contact{
+    grid-area: contact;
+}
+
+.location{
+    grid-area: location;
+}
+
+.apply{
+    padding: 40px;
+    background: white;
+    box-shadow: 0 5px 35px rgb(121, 117, 117);
+}
+
+.get-quotation{
+    margin-top: 20px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 5fr 4fr;
+    grid-template-areas: 
+    "form contact"
+    "form location";
+    grid-gap: 20px;
+}
+
+.form-box{
+    position: relative;
+    width: 100%;
+}
+
+.form-box .rows10{
+    display: flex;
+    gap: 20px;
+}
+
+.input-box{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 50%;
+}
+
+.form-box .rows .input-box{
+    width: 100%;
+}
+
+.input-box span{
+    color: #f74f4f;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-weight: 400;
+}
+
+.input-box input{
+    outline: none;
+    border: 1px solid black;
+}
+
+.input-box label{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.input-box input[type="checkbox"] {
+  transform: translate(-200px, -18px);
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.input-box input[type="radio"]{
+  transform: translate(-320px, -18px);
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.input-box input[type="submit"]{
+    background-color: #fe7d7d;
+    font-weight: 400;
+    font-size: 1.1;
+    max-width: 150px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px 5px;
+}
+
+.apply.contact {
+    background-image: url("images/applynow1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.location{
+    padding: 0;
+}
+
+.location iframe{
+    width: 100%;
+    height: 100%;
+}
+
+.results{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+/*for aminities.php page*/
+
+.row-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+  }
+  
+.row-container .row-amenities:nth-child(2){
+    margin-top: 50px;
+}
+
+  .row-amenities {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+  }
+  
+  .col-amenities {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+  }
+  
+  .img-amenities {
+    width: 200px;
+    height: 200px;
+    margin: 0 10px;
+  }
+  
+  .select-amenities {
+    display: block;
+    margin: 3px auto 0;
+  }
+
+  /*Styles for Sustainability.php*/
+
+  .desc-container{
+    max-width: 800px;
+    margin: 40px auto 20px;
+  }
+
+  .desc-container .floating-imgright {
+    max-width: 450px;
+    max-height: 350px;
+    float: right;
+    border: 3px solid #fe7d7d;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+  }
+
+  .desc-container .floating-imgleft {
+    max-width: 400px;
+    max-height: 350px;
+    float: left;
+    border: 3px solid #fe7d7d;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+  }
+
+/*Styles for Privacy Policy.php*/
+
+    .policy {
+        width: 80%;
+        margin-top: 30px;
+        display: flex;
+        height: 30vh;
+        background-color: #fbbbbb;
+        margin: 0 auto;
+        margin-top: 50px;
+        padding: 10px;
+        border-radius: 5%;
+    }
+    
+    .policy-image {
+        width: 20%;
+        padding: 10px;
+        margin: 0 20px;
+        transform: translateY(-20px);
+    }
+    
+    .policy-description {
+        width: 60%;
+        padding: 10px;
+        margin: 0 20px;
+        text-align: center;
+    }
+    
+    .policy-image-hover:hover {
+        opacity: 0.5;
+    }
+
+/*Styles for Aboutus.php page*/
+
+    #about-us {
+        width: 80%;
+        height: 70vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(246, 135, 135);
+        margin: 20px auto 0;
+        border-radius: 2%;
+    }
+
+    .profile-card {
+        position: relative;
+        width: 260px;
+        height: 260px;
+        background: white;
+        padding: 30px;
+        border-radius: 50%;
+        box-shadow: 0 0 22px 4px rgb(251, 134, 134);
+        transition: .6s;
+        transform: translateY(+5px);
+        margin: 0 25px;
+    }
+
+    .profile-card:hover {
+        border-radius: 10px;
+        height: 450px;
+    }
+
+    .profile-card .profile-image {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: .6s;
+        z-index: 99;
+    }
+
+    .profile-card:hover .profile-image {
+        transform: translateY(-60px);
+    }
+
+    .profile-image img {
+        width: 100%;
+        border-radius: 50%;
+        box-shadow: 0 0 22px white;
+    }
+
+    .caption {
+        text-align: center;
+        transform: translateY(-220px);
+        opacity: 0;
+        transition: .6s;
+    }
+
+    .profile-card:hover .caption {
+        opacity: 1;
+    }
+
+    .caption p {
+        margin: 4px 0 8px 0;
+    }
+
+    .caption .info {
+        font-size: 14px;
+    }
+
+    /*for displaying contact details of each person*/
+
+    #contact-details{
+        width: 80%;
+        height: 30vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+
+    .contact {
+        display: flex;
+        justify-content: center;
+    }
+
+    .person {
+        width: 100%;
+        background-color: #f2f2f2;
+        border: 1px solid #ddd;
+        padding: 60px;
+        margin: 0 auto;
+        
+    }
+    
+    .person h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    
+    .person p {
+        font-size: 16px;
+        margin-bottom: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .person .phone{
+        text-decoration: underline;
+    }
+
+    /*for displaying office hours*/
+
+    .office-hours {
+        width: 60%;
+        background-color: #f5f5f5;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        margin-top: 100px;
+    }
+    
+    .office-hours table {
+        width: 100%;
+        border-collapse: collapse;
+        max-width: 600px;
+    }
+    
+    .office-hours table td {
+        padding: 10px;
+        border: 1px solid #ccc;
+        text-align: center;
+    }
+
+    .office-hours table tr:nth-child(even) {
+        background-color: #e0e0e0;
+    }
+

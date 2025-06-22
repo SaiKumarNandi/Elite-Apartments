@@ -1,0 +1,96 @@
+/*For sutom fonts we have used the google fonts which are in the format of "ttf"
+    But the size of these files are really large and it slows down the page load
+    For this reason we have converted/compressed the "ttf" files to "woff" or "woff2" format
+    Also browser suppport for "woff" files is awesome
+*/
+
+@font-face {
+    font-family: 'Roboto-light';
+    src: url('fonts/roboto-light-webfont.woff2') format(woff2),
+         url('fonts/roboto-light-webfont.woff') format(woff);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto-medium';
+    src: url('fonts/roboto-medium-webfont.woff2') format(woff2),
+         url('fonts/roboto-medium-webfont.woff') format(woff);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto-black';
+    src: url('fonts/roboto-black-webfont.woff2') format(woff2),
+         url('fonts/roboto-black-webfont.woff') format(woff);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto-bolditalic';
+    src: url('fonts/roboto-bolditalic-webfont.woff2') format(woff2),
+         url('fonts/roboto-bolditalic-webfont.woff') format(woff);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sacramento-regular';
+    src: url('fonts/sacramento-regular-webfont.woff2') format(woff2),
+         url('fonts/sacramento-regular-webfont.woff') format(woff);
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*common for all pages*/
+
+    h1{
+        font-family: 'Sacramento-regular';
+        font-size: 2.5em;
+    }
+
+    h2{
+        font-family: 'Sacramento-regular';
+        font-size: 2.2em;
+    }
+
+    h3{
+        font-family: 'Sacramento-regular';
+        font-size: 2em;
+    }
+
+    p{
+        font-family: 'Roboto-light';
+        font-weight: 600;
+        font-style: italic;
+        line-height: 1.5;
+    }
+
+    caption{
+        font-family: 'Sacramento-regular';
+        font-size: 2.2em;
+    }
+
+    .index-button{
+        font-family: 'Roboto-medium';
+        font-style: italic;
+        font-size: 1em;
+    }
+    
+/*for index.php file*/
+
+/*for floorplan.php file*/
+
+/*for gallery.php file*/
+
+/*for aminities.php file*/
+
+/*for sustainability.php file*/
+
+/*for applynow.php file*/
+
+/*for privacypolicy.php file*/
+
+/*for contactus.php file*/
